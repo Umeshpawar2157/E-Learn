@@ -1,0 +1,140 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.banner2{
+    background-image: url(../../assets/employeeImage.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    background-position: center top;
+    border-bottom-left-radius: 25px ;
+    border-bottom-right-radius: 25px;
+}  
+.example-card {
+  max-width: 250px;
+  margin: 10px;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(135deg, #d0d2e4 10%, #8d9ce0 100%);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+  /* align-s: center ; */
+}
+
+
+.overlay-text {
+  position: absolute;
+  top: 30%; 
+  left: 5%; 
+  /* transform: translate(-50%, -50%);  */
+  background-color: none; 
+  color: #fff; 
+  padding: 10px 20px; 
+    /* font-size: 50px; 
+    font-weight: bolder; */
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+img{
+  background-size: cover;
+    /* background-repeat: no-repeat; */  
+    width: 100%;
+    opacity: 0.5;
+}
+
+.heading-container{
+  font-weight: 800;
+  font-size: 65px;
+  animation: slideInFromLeft 1s ease;
+}
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-col{
+  margin: 30px;
+  width: 40%;
+  height: 50%;
+  padding:15px;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: scale(1); /* Start with normal size */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up */
+    opacity: 0.5; /* Semi-transparent */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply animation to the text */
+.animated-text {
+  animation: textAnimation 3s 1; /* Apply the animation */
+}
+.card-bottom-container{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(115, 106, 236);
+}
+.heading-container{
+  font-weight: 800;
+  font-size: 65px;
+  animation: slideInFromTop 1s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+@keyframes slideInFromTop {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.highlight-on-hover {
+  transition: filter 0.3s ease-in-out;
+}
+
+.highlight-on-hover:hover {
+  filter: brightness(150%);
+}

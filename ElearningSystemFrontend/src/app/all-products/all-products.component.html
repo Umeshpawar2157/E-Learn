@@ -1,0 +1,174 @@
+<!-- 
+<div class="image-container">
+  <img mat-card-image src="../../assets/elearningImgage.jpg" alt="" style="height: 1200px;">
+  <div class="overlay-text">
+        
+    <div class="card-bottom-container">
+      <div class="heading-container ">
+        <span style="color: white">Our</span>
+        <span style="color: rgb(237,81,194);">Courses</span>
+    </div>
+      <div class="card-container " style="margin-top: 50px;">
+        <mat-card class="example-card fade-in highlight-on-hover card">
+            <img mat-card-image src="../../assets/fullstack.jpg" style="opacity: 1;">
+            <mat-card-content >
+              <div class="div-container">
+              <h3>Java Full Stack Development</h3><br>
+              <h3 style="text-align: left; font-size: 20px;">
+                  Module1:Core Java<br>
+                  Module2:Advanced Java<br>
+                  Module3:Angular<br>
+                  Module4:SQL<br>
+                  Module5:Full Stack Developer Projects<br>
+              </h3>               
+              <p>
+               Duration : 6 months
+               <br>
+               Fees : 40000
+              </p>
+              <p>
+                <button *ngIf="isLoggedIn()" type="button"  color="primary" routerLink="/fullstack">View & Buy</button>
+              </p>
+              </div>
+            </mat-card-content>
+            <!-- <mat-card-actions>
+              <button class="button"mat-raised-button color="primary" routerLink="/fullstack" >View & Buy</button>
+            </mat-card-actions> -->
+          <!-- </mat-card>
+    
+          <mat-card class="example-card fade-in highlight-on-hover card">            
+            <img mat-card-image src="../../assets/testing.jpg" style="  opacity: 1;
+            height: 175px;" >
+            <mat-card-content>
+              <div style="height: 120px;" class="div-container"><br>
+              <h3>Software testing</h3><br>
+              <h3 style="text-align: left;font-size: 20px;">
+                   Module1:Manual Testing<br>
+                  Module2:Automation Testing<br>
+                  Module3:ISTQB Preparation<br>
+                  Module4:API Testing<br>
+                  Module5:Software Testing Projects<br><br></h3>
+              <p>
+              Duration: 3 months
+              <br>
+              Fees : 20000
+              </p>
+              <p>
+                <button *ngIf="isLoggedIn()" type="button"  color="primary" routerLink="/fullstack">View & Buy</button>
+              </p>
+              </div>
+            </mat-card-content> -->
+            <!-- <mat-card-actions>
+              <button class="button"mat-raised-button color="primary" routerLink="/testing"style="margin-bottom: 2px;">View & Buy</button>
+            </mat-card-actions> -->
+          <!-- </mat-card>
+    
+          <mat-card class="example-card fade-in highlight-on-hover card">
+            <img mat-card-image src="../../assets/aws.jpg" style="  opacity: 1;
+            ">
+            <mat-card-content>
+              <div style="height: 120px; text-align: center;"class="div-container">
+                  <br>
+              <h3>AWS</h3>
+              <br>
+              <h3 style="text-align: left;font-size: 20px;">
+                  Module1:Artificial Intelligence.<br>
+                  Module2:Cloud Development.<br>
+                  Module3:Database & Analytics Strategy.<br>
+                  Module4:Infrastructure.<br>
+                  Module5:Managing AWS.<br>
+              </h3>
+              
+              <p>
+             Duration: 3 months
+             <br>
+             Fees : 20000
+              </p>
+             
+              <div class="mt-2">
+                <button type="button" mat-raised-button color="warn" style="font-size: 14px;"
+                  (click)="showProductDetails(p.productId)">View
+                  Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" mat-raised-button color="light" style="font-size: 14px;"
+                  (click)="addToCart(p.productId)">Add To Cart</button> 
+              </div>-->
+                <!-- <button *ngIf="isLoggedIn()" type="button"  color="primary" routerLink="/aws">View & Buy</button> -->
+              
+              <!-- </div> -->
+            <!-- </mat-card-content> -->
+            <!-- <mat-card-actions>
+              <button class="button" mat-raised-button color="primary" routerLink="/aws">View & Buy</button>
+            </mat-card-actions> -->
+          <!-- </mat-card>
+        
+    </div> 
+    </div>
+    </div>
+  </div>
+  <app-footer></app-footer> -->
+
+
+
+  <div class="container">
+    <div class="step mt-5">
+      <h1 class=" mb-3">Our<i> Courses</i></h1>
+    </div>
+  </div>
+  
+  <div class="container">
+  
+  
+    <div class="search_button  w-50 ">
+  
+      <div class="input-icons">
+        <i class="bi bi-search icon"></i>
+        <input class="input-field" matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" ngModel
+          name="searchKey" id="searchKey" placeholder="Search any Course">
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3" *ngFor="let p of productDetails" style="border: 1px solid; padding: 8px;margin: 10px;background-color: rgb(9,9,73); color: white;border-radius: 3%;">
+        <div class="row p-2 mt-5 " (click)="showProductDetails(p.productId)">
+          <div class="image-container">
+            <img class=".home-page-product-image" height="180px" width="250px" [src]="p.productImages[0].url" alt="">
+          </div>
+          <div>
+            <p><b style="font-family: 'Times New Roman', Times, serif;">{{p.productName}}</b></p>
+          </div>
+          <div class="class-desp">
+            <p style="white-space: inherit; height:30px; width: 250px; overflow: hidden; text-overflow:  ellipsis;">
+              {{p.productDescription}} </p>
+          </div>  
+          <div>
+            <b><i class="bi bi-currency-rupee"></i>{{p.productDiscountedPrice}} </b> &nbsp;&nbsp;<b
+              style="text-decoration:line-through">
+              {{p.productActualPrice}}</b>
+          </div>  
+          <div class="mt-2">
+            <button type="button" mat-raised-button color="warn" style="font-size: 14px;"
+              (click)="showProductDetails(p.productId)">View
+              Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" mat-raised-button color="primary" style="font-size: 14px;" 
+              (click)="addToCart(p.productId)">Add To Cart</button>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
+    <button  type="button" mat-raised-button style="background-color: green; color: white;"
+      (click)="loadMoreProduct()">View more</button>
+  </div>
+  
+  
+  <div style="margin-top: 30px;">
+    <!-- <app-footer></app-footer> -->
+  </div>
+
+   

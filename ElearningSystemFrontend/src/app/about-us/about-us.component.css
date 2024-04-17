@@ -1,0 +1,74 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 5%; 
+  left: 5%; 
+  /* transform: translate(-50%, -50%);  */
+  background-color: none; 
+  color: #fff; 
+  padding: 10px 20px; 
+    /* font-size: 50px; 
+    font-weight: bolder; */
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.heading-container{
+  font-weight: 800;
+  font-size: 65px;
+  text-align: center;
+  animation: slideInFromLeft 1s ease;
+}
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+.footer-col{
+margin: 30px;
+width: 40%;
+height: 100%;
+padding:15px;
+}
+
+@keyframes textAnimation {
+0% {
+  transform: scale(1); /* Start with normal size */
+  opacity: 1; /* Fully visible */
+}
+50% {
+  transform: scale(1.2); /* Scale up */
+  opacity: 0.5; /* Semi-transparent */
+}
+100% {
+  transform: scale(1); /* Back to normal size */
+  opacity: 1; /* Fully visible */
+}
+}
+
+/* Apply animation to the text */
+.animated-text {
+animation: textAnimation 3s 1; /* Apply the animation */
+}

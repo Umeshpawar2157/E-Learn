@@ -1,0 +1,141 @@
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    /* overflow: scroll; */
+    height: 500px;
+    border: 0px;
+    background-color: rgb(9, 9, 73);
+    border-radius: 10%;
+    text-align: center;
+}
+.heading-container{
+    font-weight: 800;
+    font-size: 65px;
+    animation: slideInFromTop 1s ease;
+    text-align: center;
+  }
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+h1 {
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 10;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 2%; 
+    left: 5%;
+    /* transform: translate(-50%, -50%);  */
+    background-color: none; 
+    color: #fff; 
+    padding: 10px 20px; 
+      /* font-size: 50px; 
+      font-weight: bolder; */
+    text-align: left;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .bottom-div{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    /* background-color: rgb(146, 166, 211); */
+  }
+  .animated-text {
+    animation: textAnimation 3s 1;
+    text-align: center;
+  }
+  @keyframes textAnimation {
+    0% {
+      transform: scale(1); /* Start with normal size */
+      opacity: 1; /* Fully visible */
+    }
+    50% {
+      transform: scale(1.2); /* Scale up */
+      opacity: 0.5; /* Semi-transparent */
+    }
+    100% {
+      transform: scale(1); /* Back to normal size */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  ul li{
+    list-style: none;
+  }

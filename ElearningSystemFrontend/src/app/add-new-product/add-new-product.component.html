@@ -1,0 +1,101 @@
+<div class="container mt-5">
+    <div class="card p-2">
+
+        <div class="row" style="padding: 10px;">
+            <div class="col-6">
+
+                <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Course Name</mat-label>
+                        <input matInput 
+                        placeholder="Course Name"
+                        [(ngModel)]="product.productName"
+                        name="productName">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Course Description</mat-label>
+                        <input matInput 
+                        placeholder="Course Description"
+                        [(ngModel)]="product.productDescription"
+                        name="productDescription">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Course Actual Price</mat-label>
+                        <input matInput 
+                        placeholder="Course Actual Price"
+                        [(ngModel)]="product.productActualPrice"
+                        name="productActualPrice">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Course Discount Price</mat-label>
+                        <input matInput 
+                        placeholder="Course Discount Price"
+                        [(ngModel)]="product.productDiscountedPrice"
+                        name="productDiscountedPrice">
+                    </mat-form-field>
+
+                    <div class="text-center">
+                        <button mat-stroked-button color="primary" style="margin-right: 3px;  background-color: #300f5a; color: white; width:200px;height: 60px;">Clear</button>
+                        <button type="submit" mat-stroked-button color="primary" style="background-color: #310957; color: white;width:200px;height: 60px;" *ngIf="isNewProduct">Add Course</button>
+                        <button type="submit" mat-stroked-button color="primary" style="background-color: #450b5f; color: white;width:200px;height: 60px;" *ngIf="!isNewProduct">Update Course</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-6">
+                <div>
+
+                    <div class="dropzone"
+                    appDrag
+                    >
+                        <div class="text-wrapper">
+                            <div class="centered">
+                                
+                                <a (click)="selectFile.click()" class="browse-button">Browse</a> 
+                                a file
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+                    <input type="file" 
+                    style="display: none;"
+                    multiple value="select" 
+                    #selectFile
+                    (change)="onFileSelected($event)">
+                </div>
+
+                <div class="mt-5">
+                    <div class="row">
+                        <mat-grid-list cols="4" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of product.productImages; let i = index;">
+                                <div style="position: relative">
+                                    <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                    <img [src]="file.url" width="100px" height="100px">
+
+                                </div>
+
+                            </mat-grid-tile>
+
+                        </mat-grid-list>
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<div style="margin-top: 30px;">
+    <!-- <app-footer></app-footer> -->
+  </div>

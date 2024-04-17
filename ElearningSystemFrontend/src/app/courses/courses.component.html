@@ -1,0 +1,68 @@
+<div class="image-container">
+    <img mat-card-image src="../../assets/elearningImgage.jpg" alt="">
+    <div class="overlay-text">
+          
+      <div class="card-bottom-container">
+        <div class="heading-container ">
+          <span style="color: rgb(224, 224, 228)">Our</span>
+          <span style="color: rgb(237,81,194);">Courses</span>
+      </div>
+        <div class="card-container " style="margin-top: 50px;">
+          <mat-card class="example-card fade-in highlight-on-hover card">
+              <img mat-card-image src="../../assets/fullstack.jpg" style="opacity: 1;">
+              <mat-card-content >
+                <div class="div-container">
+                <h1 style="font-size: 20px;">Java Full Stack Development</h1>
+                <p>
+                 Duration : 6 months
+                </p>
+                </div>
+              </mat-card-content>
+              <!-- <button *ngIf="isLoggedIn()" type="button"  color="primary" routerLink="/fullstack">View & Buy</button> -->
+
+                <!-- <button class="button"mat-raised-button color="primary" routerLink="/fullstack" >View & Buy</button> -->
+              
+              </mat-card>
+      
+            <mat-card class="example-card fade-in highlight-on-hover card">            
+              <img mat-card-image src="../../assets/testing.jpg" style="  opacity: 1;
+              height: 175px;" >
+              <mat-card-content>
+                <div style="height: 120px;" class="div-container">
+                <h1 style="font-size: 20px;">Software testing</h1>
+                <p>
+                Duration: 3 months
+                </p>
+                </div>
+              </mat-card-content>
+              <mat-card-actions>
+                <!-- <button *ngIf="isLoggedIn()" type="button" class="btn btn-light" color="primary"routerLink="/testing">View & Buy</button> -->
+
+                <!-- <button class="button"mat-raised-button color="primary" routerLink="/testing"style="margin-bottom: 2px;">View & Buy</button> -->
+              </mat-card-actions>
+            </mat-card>
+      
+            <mat-card class="example-card fade-in highlight-on-hover card">
+              <img mat-card-image src="../../assets/aws.jpg" style="  opacity: 1;
+              ">
+              <mat-card-content>
+                <div style="height: 120px; text-align: center;"class="div-container">
+                <h1 style="font-size: 20px;">AWS</h1>
+                <p>
+               Duration: 3 months
+                </p>
+                </div>
+              </mat-card-content>
+              <mat-card-actions>
+                <button *ngIf="! isLoggedIn()" type="button" class="btn btn-light" color="primary"routerLink="/aws">View & Buy</button>
+
+                <!-- <button class="button" mat-raised-button color="primary" routerLink="/aws">View & Buy</button> -->
+              </mat-card-actions>
+            </mat-card>
+      </div> 
+      </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  
+    

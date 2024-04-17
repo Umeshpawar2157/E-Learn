@@ -1,0 +1,130 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 10%; 
+    left: 5%;
+    background-color: none; 
+    color: #fff; 
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  
+@keyframes textAnimation {
+  0% {
+    transform: scale(1); /* Start with normal size */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up */
+    opacity: 0.5; /* Semi-transparent */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply animation to the text */
+.animated-text {
+  animation: textAnimation 3s 1; /* Apply the animation */
+}
+.card-bottom-container{
+  text-align: center;
+  /* margin: 5px; */
+  padding: 20px;
+  background-color: rgb(9,9,73);
+  /* width: 100vh; */
+  margin-left: 40px;;
+}
+.heading-container{
+  font-weight: 800;
+  font-size: 65px;
+  animation: slideInFromTop 1s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+@keyframes slideInFromTop {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.example-card {
+  max-width: 350px;
+  margin: 10px;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+  /* align-s: center ; */
+}
+mat-card-content{
+  color: black;
+}
+p{
+  font-size: 15px;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.button{
+  margin  : 0 auto   ;
+}
+.div-container{
+  padding-top: 20px;
+}
+.highlight-on-hover {
+  transition: filter 0.3s ease-in-out;
+}
+
+.highlight-on-hover:hover {
+  filter: brightness(100%);
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

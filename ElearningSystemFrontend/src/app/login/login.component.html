@@ -1,0 +1,102 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="imgBG">
+                <img class="bgImg" src="../../assets/employeeImage.jpg" >
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-6 p-5">
+            <h3>Login</h3>
+            <p class="text-center">Don't have an account? <a routerLink="/register">Create Your Account</a></p>
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input matInput ngModel name="userName" id="userName" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                        placeholder="Email" class="form-control">
+                </mat-form-field>
+
+                <mat-form-field  style="margin-bottom: 40px;" appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input matInput ngModel name="userPassword" id="userPassword" required type="password"
+                        placeholder="Password" class="form-control">
+                    
+
+                   
+                </mat-form-field>
+
+                <button class = "btnStyle" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+<div class=" image-container">
+    <img class="" mat-card-image src="../../assets/elearningImgage.jpg" alt="">
+    <div class=" overlay-text fade-in">
+      <div class="row">
+        <div class="text-center sign-up">
+          <span style="font-size: 60px;color: rgb(9,9,73); font-weight: bold;margin-bottom: 80px;">Login</span><br>
+          <p class="text-center">Don't have an account? <a routerLink="/register">Create Your Account</a></p>
+
+          <!-- <h2 style="color: rgb(9,9,73);margin: 20px;"> Don`t have an account ?<a routerLink="/signup">Sign Up</a> here.
+          </h2> -->
+        </div>
+        <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+          <div class="card auth">
+            <div class="card-body auth-card">
+              <div class="auth-avatar">
+                <img src="assets/logog.gif" alt="login" width="450" height="300" style="opacity: 1;">
+              </div>
+            
+              <!-- <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="loginform">
+  
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Email</mat-label>
+                  <input matInput ngModel name="userName" id="userName" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                    placeholder="Email" class="form-control">
+                </mat-form-field>
+  
+                <mat-form-field style="margin-bottom: 40px;" appearance="outline" class="w-100">
+                  <mat-label>Password</mat-label>
+                  <input matInput ngModel name="userPassword" id="userPassword" required type="password" placeholder="Password" class="form-control">
+  
+  
+                </mat-form-field>
+  
+                <button color="primary" type="submit" routerLink="/courses">Login</button>
+              </form> -->
+
+
+              <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input matInput ngModel name="userName" id="userName" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                        placeholder="Email" class="form-control">
+                </mat-form-field>
+
+                <mat-form-field  style="margin-bottom: 40px;" appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input matInput ngModel name="userPassword" id="userPassword" required type="password"
+                        placeholder="Password" class="form-control">      
+
+                   
+                </mat-form-field>
+
+                <button class = "btnStyle" type="submit">Login</button>
+            </form>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-footer></app-footer> -->
+  
